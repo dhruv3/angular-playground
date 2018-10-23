@@ -1,2 +1,2 @@
-# js-stuff
-A repository of JavaScript concepts with code 
+# HKUST Angular MOOC 
+[Link to the course](https://www.coursera.org/learn/angular)
