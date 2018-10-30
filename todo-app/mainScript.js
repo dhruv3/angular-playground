@@ -22,4 +22,12 @@ angular.module("mainApp",[
         {"id": 2, "name": "Exercise"},
         {"id": 3, "name": "Humor"}
     ]
+    $scope.currCategory = null;
+    function setCurrCategory(category){
+        $scope.currCategory = category;
+    }
+    function isCurrCategory(category){
+        return category != null && category.name == currCategory.name;
+    }
+    $scope.setCurrCategory = setCurrCategory;
 })

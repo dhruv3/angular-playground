@@ -12,3 +12,14 @@
 We have defined a main controller with two arrays of objects, category and bookmarks.
 
 Think of scope as the glue between the controller and the view.
+
+## Lecture 4
+Revealing module pattern used to set current category.
+* ng-class:
+```html
+<li ng-repeat = "category in categories" ng-class="{'active': isCurrCategory(category)">
+```
+* filter
+```html
+<div ng-repeat = "bookmark in bookmarks | filter:{category: currCategory.name}">
+```
