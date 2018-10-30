@@ -26,3 +26,11 @@ Revealing module pattern used to set current category.
 
 ## Lecture 5
 * ng-if: show something if the expression evaluated to true
+
+## Lecture 6
+form submit handled in angular.
+
+## Lecture 7
+ng-click, ng-submit, and other action directives is you can actually call more than one method when that action is actually executed by the users.
+
+angular.copy: Done so as to ensure that model binding does not take place.

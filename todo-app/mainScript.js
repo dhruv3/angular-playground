@@ -78,4 +78,20 @@ angular.module("mainApp",[
         resetCreateForm();
     }
     $scope.createBookmark = createBookmark;
+
+    $scope.editBookmark = null;
+    function setEditedBookmark(bookmark){
+        $scope.editedBookmark = angular.copy(bookmark);
+    }
+    function updateBookmark(bookmark){
+        var index = _.findIndex($scope.bookmarks, function(b){
+            return b.id == bookmark.id;
+        });
+        $scope.bookmarks[index] = bookmark;
+
+        $scope.editedBookmark = null;
+        $scope.isEditing = false;
+    }
+    $scope.setEditedBookmark = setEditedBookmark;
+    $scope.updateBookmark = updateBookmark;
 })
