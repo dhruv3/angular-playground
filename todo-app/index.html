@@ -32,10 +32,24 @@
                     <input type="text" ng-model="hello">
                     <div ng-repeat = "bookmark in bookmarks | filter:{category: currCategory.name}">
                         <button type="button" class="close">&times;</button>
-                        <button type="button" class="btn btn-link"><span class="glyphicon glyphicon-pencil"></span></button>
+                        <button type="button" ng-click="startEditing()" class="btn btn-link"><span class="glyphicon glyphicon-pencil"></span></button>
                         <a href={{bookmark.url}} target="_blank">{{bookmark.title}}</a>
                     </div>
                     <hr/>
+                    <div ng-if="shouldShowCreating()">
+                        <button type="button" class="btn btn-link" ng-click="startCreating()">
+                            <span class="glyphicon glyphicon-plus"></span>
+                            Create Bookmark
+                        </button>
+                        <div ng-if="isCreating">
+                            Create a bookmark!
+                            <button type="button" class="btn btn-default btn-lg pull-right" ng-click="cancelCreating()">Cancel</button>
+                        </div>
+                    </div>
+                    <div ng-if="shouldShowEditing()">
+                        Edit a bookmark!
+                        <button type="button" class="btn btn-default btn-lg pull-right" ng-click="cancelEditing()">Cancel</button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -23,3 +23,6 @@ Revealing module pattern used to set current category.
 ```html
 <div ng-repeat = "bookmark in bookmarks | filter:{category: currCategory.name}">
 ```
+
+## Lecture 5
+* ng-if: show something if the expression evaluated to true

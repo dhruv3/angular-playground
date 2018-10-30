@@ -27,7 +27,39 @@ angular.module("mainApp",[
         $scope.currCategory = category;
     }
     function isCurrCategory(category){
-        return category != null && category.name == currCategory.name;
+        return category != null && category.name == $scope.currCategory.name;
     }
     $scope.setCurrCategory = setCurrCategory;
+    $scope.isCurrCategory = isCurrCategory;
+
+    //creating and editing states
+    $scope.isCreating = false;
+    $scope.isEditing = false;
+    function startCreating(){
+        $scope.isCreating = true;
+        $scope.isEditing = false;
+    }
+    function cancelCreating(){
+        $scope.isCreating = false;
+    }
+    function startEditing(){
+        $scope.isCreating = false;
+        $scope.isEditing = true;
+    }
+    function cancelEditing(){
+        $scope.isEditing = false;
+    }
+    $scope.startCreating = startCreating;
+    $scope.cancelCreating = cancelCreating;
+    $scope.startEditing = startEditing;
+    $scope.cancelEditing = cancelEditing;
+
+    function shouldShowCreating(){
+        return $scope.currCategory && !$scope.isEditing;
+    }
+    function shouldShowEditing(){
+        return $scope.isEditing && !$scope.isCreating;
+    }
+    $scope.shouldShowCreating = shouldShowCreating;
+    $scope.shouldShowEditing = shouldShowEditing;
 })
