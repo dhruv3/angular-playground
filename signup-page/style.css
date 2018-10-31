@@ -2,6 +2,8 @@ body, html{
     height: 100%;
     padding: 0px;
     margin: 0px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
 }
 
 #root{
@@ -10,4 +12,67 @@ body, html{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.create-form{
+  width: 400px;
+  margin-top: 20px;
+}
+
+.header{
+  font-size: 40px;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+}
+
+label{
+  font-size: 1rem;
+  font-weight: 550;
+  margin-bottom: .5rem;
+  margin-top: 1rem;
+}
+
+.form-control{
+  display: block;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+button{
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
+  font-size: 30px;
+  line-height: 32px;
 }

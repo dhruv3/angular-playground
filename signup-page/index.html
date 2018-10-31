@@ -8,7 +8,32 @@
     </head>
     <body ng-controller="mainCtrl">
         <div id="root">
-            
+            <div>
+                <div class="header">Sign Up for daily news</div>
+                <form class="create-form" role="form" ng-submit="">
+                    <div class="form-group">
+                        <label for="userName">Username</label>
+                        <input type="text" class="form-control" id="userName" ng-model="" placeholder="Enter username">
+                    </div>
+                    <div class="form-group">
+                        <label for="emailID">E-mail address</label>
+                        <input type="text" class="form-control" id="emailID" ng-model="" placeholder="Enter E-mail Address">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password</label>
+                        <input type="text" class="form-control" id="pwd" ng-model="" placeholder="Enter password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPwd">Confirm Password</label>
+                        <input type="text" class="form-control" id="confirmPwd" ng-model=""" placeholder="Confirm password">
+                    </div>
+                    <div class="form-group">
+                        <label for="fullName">Enter Full-Name</label>
+                        <input type="text" class="form-control" id="fullName" ng-model="" placeholder="Enter full-name">
+                    </div>
+                    <button type="submit" class="btn btn-info btn-lg">Submit!</button>
+                </form>
+            </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
         <script src="script.js"></script>
