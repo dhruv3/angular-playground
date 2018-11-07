@@ -7,7 +7,13 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body ng-controller="mainCtrl">
-
+        <h1>{{message}}</h1>
+        <div>
+            <div class="error">{{error}}</div>
+            <div>Name: {{user.name}}</div>
+            <div>Location: {{user.location}}</div>
+            <img ng-src="{{user.avatar_url}}" />
+        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
         <script src="script.js"></script>
     </body>
