@@ -8,6 +8,21 @@
     </head>
     <body ng-controller="mainCtrl">
         <h1>{{message}}</h1>
+        {{username}}
+        <form name="searchUser" ng-submit="search(username)">
+            <input type="search" required placeholder="Enter Username" ng-model="username"/>
+            <input type="submit" value="Search"/>
+        </form>
+        <div>
+            <div class="error">{{error}}</div>
+            <div>Name: {{searchUser.name}}</div>
+            <div>Location: {{searchUser.location}}</div>
+            <img ng-src="{{searchUser.avatar_url}}" />
+        </div>
+        <div ng-repeat="repo in repos">
+            <div>{{repo.name}}: {{repo.language}}</div>
+        </div>
+
         <div>
             <div class="error">{{error}}</div>
             <div>Name: {{user.name}}</div>

@@ -11,7 +11,22 @@
         }
         $http.get("https://api.github.com/users/dhruv3")
             .then(success, fail);
-        
+
+        const onRepos = function(response){
+            $scope.repos = response.data;
+        }
+        const searchSuccess = function(response){
+            $scope.searchUser = response.data;
+            $http.get($scope.searchUser.repos_url)
+                .then(onRepos, searchFail);
+        }
+        const searchFail = function(response){
+            $scope.error = response;
+        }
+        $scope.search = function(username){
+            $http.get("https://api.github.com/users/" + username)
+                .then(searchSuccess, searchFail);
+        }       
     }
 
     app.controller("mainCtrl", mainController)
