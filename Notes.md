@@ -58,4 +58,14 @@ phonecatApp.controller('PhoneListController', function PhoneListController($scop
   ];
 });
 ```
+We connected the dots between the presentation, data, and logic components as follows:
+* The ngController directive, located on the <body> tag, references the name of our controller, PhoneListController (located in the JavaScript file app.js).
+* The PhoneListController controller attaches the phone data to the $scope that was injected into our controller function. This scope is a prototypal descendant of the root scope that was created when the application was defined. This controller scope is available to all bindings located within the <body ng-controller="PhoneListController"> tag.
+
+AngularJS scopes prototypically inherit from their parent scope, all the way up to the root scope of the application. As a result, assigning values directly on the scope makes it easy to share data across different parts of the page and create interactive applications.
+
+## Components
+Template + Controller combined together into reusable and isolated entities called components.
+
+AngularJS will create a so called isolate scope for each instance of our component, which means no prototypal inheritance and no risk of our component affecting other parts of the application or vice versa.
 
