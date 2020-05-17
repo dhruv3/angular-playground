@@ -1,7 +1,7 @@
 <div class="container">
   <div class="columns is-centered">
     <div class="box column is-one-third">
-      <h1 class="title has-text-centered">Password Generator</h1>
+      <h1 class="title has-text-centered">Dograji Password Generator</h1>
 
       <div class="field">
         <label>Length</label>
@@ -41,7 +41,7 @@
         Generate!
       </button>
 
-      <div class="box">
+      <div class="box" *ngIf="password" >
         <label>Your Password</label>
         <input class="input" [value]="password" />
       </div>
