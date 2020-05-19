@@ -7,5 +7,9 @@ import { lorem } from 'faker';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'typing-challenge';
+  randomText = lorem.sentence();
+  response = false;
+  onInput(value: string){
+    this.response = value === this.randomText ? true : false;
+  }
 }
