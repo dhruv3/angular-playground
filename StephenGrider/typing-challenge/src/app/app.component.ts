@@ -9,7 +9,16 @@ import { lorem } from 'faker';
 export class AppComponent {
   randomText = lorem.sentence();
   response = false;
+  placeholder = "";
   onInput(value: string){
+    this.placeholder = value;
     this.response = value === this.randomText ? true : false;
+  }
+
+  compare(randomLetter: string, enteredLetter: string){
+    if(!enteredLetter){
+      return 'pending';
+    }
+    return randomLetter === enteredLetter ? 'correct' : 'incorrect';
   }
 }
