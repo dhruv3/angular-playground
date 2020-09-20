@@ -29,3 +29,35 @@ export class AppComponent{
 * Keyword Diagram:
 <img width="1288" alt="KeywordsNotes" src="https://user-images.githubusercontent.com/13077629/93686391-848d5e00-fa7b-11ea-92dd-373a25199391.png">
 
+# Section 3: Building Components
+* Angular Server initial working:
+<img width="710" alt="angularWorks1" src="https://user-images.githubusercontent.com/13077629/93693676-99441300-fac8-11ea-89a2-09ec68734f92.png">
+
+* App Bootup Process:
+<img width="450" alt="AppBootUpProcess" src="https://user-images.githubusercontent.com/13077629/93693686-af51d380-fac8-11ea-9b94-4472b7d0e306.png">
+
+* Communicate from parent to child component:
+<img width="641" alt="ParentToChild" src="https://user-images.githubusercontent.com/13077629/93693798-32bff480-faca-11ea-8332-6081166ab6b9.png">
+
+**Parent Component**
+```html
+<app-card
+    *ngFor="let post of posts"
+    [title]="post.title"
+    [imageUrl]="post.imageUrl"
+    [username]="post.username"
+    [content]="post.content"
+></app-card>
+```
+**Child Component**
+```js
+export class CardComponent implements OnInit {
+  @Input() title = "";
+  @Input() imageUrl = "";
+  @Input() content = "";
+  @Input() username = "";
+  constructor() { }
+  ngOnInit(): void {
+  }
+}
+```
