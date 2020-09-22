@@ -61,3 +61,8 @@ export class CardComponent implements OnInit {
   }
 }
 ```
+# Section 4: Exercise
+* Typing Challenge app
+# Section 5: Mastering Pipes
+* Pipes overview:
+<img width="996" alt="pipes" src="https://user-images.githubusercontent.com/13077629/93719638-86bdee00-fb49-11ea-8c8b-54a850a8fc1c.png">
