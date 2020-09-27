@@ -118,3 +118,26 @@ constructor(private element:ElementRef) {
 * Angular props: `ViewContainerRef`, `TemplateRef`
   * ViewContainerRef: It is custom version of our element on which our directive is applied and you can do stuff to the content inside it(like the children DOM).
   * TemplateRef: References all the elements inside our container element(on which directive is applied to).
+
+# Section 7: Module System
+* Types of modules:
+<img width="673" alt="Screen Shot 2020-09-26 at 9 41 04 PM" src="https://user-images.githubusercontent.com/13077629/94354506-4bd42280-0041-11eb-97b2-69db966bdebd.png">
+
+* Creating a module:
+<img width="686" alt="Screen Shot 2020-09-26 at 9 42 54 PM" src="https://user-images.githubusercontent.com/13077629/94354520-6c03e180-0041-11eb-918b-41ab342fda34.png">
+
+* **Export** the comps and then **import** them in the files you want to use them.
+
+* `NgModule` decorator and what the props mean:
+<img width="721" alt="Screen Shot 2020-09-26 at 10 05 21 PM" src="https://user-images.githubusercontent.com/13077629/94354811-9a36f080-0044-11eb-8aa4-259b2cb2b347.png">
+
+# Section 8: Routing and Navigation
+* App module imports entire `Elements` module and when it does that it also gets the routing module present in `Elements`.
+* Angular finds whatever elements matches the path in the URL and displays it in place of `router-outlet` HTML element.
+* `routerLink` it talks directly to our `router` in Angular and prevents complete refresh of the page. So use `routerLink` instead of `href` wheerever possible.
+* `routerLinkActive` applies whatever class you mentioned(active in our case) whenever our route is selected.
+```js
+<a routerLink="/elements" routerLinkActive="active" class="item">Elements</a>
+```
+* **NOTE:** Not all components need to be a part of some module
+* **Reordering Routing Rules:** As soon as Angular finds first matching route it returns and stops looking further. So MOVE the APPROUTING module at the end in your app module file.
