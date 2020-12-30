@@ -132,7 +132,13 @@ constructor(private element:ElementRef) {
 <img width="721" alt="Screen Shot 2020-09-26 at 10 05 21 PM" src="https://user-images.githubusercontent.com/13077629/94354811-9a36f080-0044-11eb-8aa4-259b2cb2b347.png">
 
 # Section 8: Routing and Navigation
+<img width="735" alt="Screen Shot 2020-12-28 at 11 38 40 PM" src="https://user-images.githubusercontent.com/13077629/103261195-359e7100-4966-11eb-88a6-71cf3e33c6dc.png">
+
 * App module imports entire `Elements` module and when it does that it also gets the routing module present in `Elements`.
+
+<img width="711" alt="Screen Shot 2020-12-28 at 11 44 50 PM" src="https://user-images.githubusercontent.com/13077629/103261322-bcebe480-4966-11eb-84b1-b7fa78cca80a.png">
+
+
 * Angular finds whatever elements matches the path in the URL and displays it in place of `router-outlet` HTML element.
 * `routerLink` it talks directly to our `router` in Angular and prevents complete refresh of the page. So use `routerLink` instead of `href` wheerever possible.
 * `routerLinkActive` applies whatever class you mentioned(active in our case) whenever our route is selected.
@@ -141,3 +147,29 @@ constructor(private element:ElementRef) {
 ```
 * **NOTE:** Not all components need to be a part of some module
 * **Reordering Routing Rules:** As soon as Angular finds first matching route it returns and stops looking further. So MOVE the APPROUTING module at the end in your app module file.
+
+# Section 9: Lazy Loading with Modules
+<img width="660" alt="Screen Shot 2020-12-29 at 12 54 31 PM" src="https://user-images.githubusercontent.com/13077629/103307184-1854bb80-49d5-11eb-9cb2-959870789760.png">
+
+* Make change in App Module import. Add `loadChildren` in AppRouting. Update `routes` in your Routed Module.
+
+<img width="682" alt="Screen Shot 2020-12-29 at 1 01 00 PM" src="https://user-images.githubusercontent.com/13077629/103307546-f1e35000-49d5-11eb-8bdc-f8271529d512.png">
+
+* Shared Modules will have components that are sharable across different modules
+
+* `ng-content`:
+<img width="775" alt="Screen Shot 2020-12-29 at 2 23 40 PM" src="https://user-images.githubusercontent.com/13077629/103312039-81dac700-49e1-11eb-8762-734fd698724f.png">
+
+* `ng-content` with `select="header"` or you can use class name too `select=".icon-header"`. Tells Angular look for tag named as `header` and take its content:
+<img width="513" alt="Screen Shot 2020-12-29 at 2 30 10 PM" src="https://user-images.githubusercontent.com/13077629/103312400-83f15580-49e2-11eb-9ab3-6398e5ada6bd.png">
+
+# Section 10: Adv Comp Routing
+<img width="654" alt="Screen Shot 2020-12-29 at 9 29 45 PM" src="https://user-images.githubusercontent.com/13077629/103328093-0e56ab00-4a1d-11eb-984d-068983d286c7.png">
+
+* Relative Routing: RouterLink
+<img width="829" alt="Screen Shot 2020-12-29 at 9 38 47 PM" src="https://user-images.githubusercontent.com/13077629/103328358-414d6e80-4a1e-11eb-94f5-cbb2a859bdf8.png">
+
+* To match the path exactly we need to do as follows:
+```js
+[routerLinkActiveOptions]='{exact: true}'
+```
